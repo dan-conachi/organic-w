@@ -1,0 +1,14 @@
+<div class="flex-container">
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link [routerLink]="['company']">Company</a>
+    <a mat-tab-link [routerLink]="['taxes']">Taxes</a>
+    <a mat-tab-link [routerLink]="['logo']">Logo&Colors</a>
+    <a mat-tab-link [routerLink]="['template']">Templates</a>
+    <a mat-tab-link [routerLink]="['email']">Emails</a>
+    <a mat-tab-link [routerLink]="['permission']">Permissions</a>
+    <a mat-tab-link [routerLink]="['misc']">Misc</a>
+  </nav>
+  <div class="space-container" style="background-color: #cfddec;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

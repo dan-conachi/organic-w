@@ -1,0 +1,35 @@
+<div>
+    <div mat-dialog-content>
+        <h1 mat-dialog-title>Vendors</h1>
+        <div class="col col12">
+            <form novalidate [hidden]="!addMode" [formGroup]="vendorForm">
+                <mat-form-field class="col col12">
+                    <mat-label>New vendor</mat-label>
+                    <input matInput type="text" formControlName="name" tabindex="1" placeholder="Vendor">
+                    <mat-error>This filed is mandatory!</mat-error>
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="col col12"><button *ngIf="!addMode" (click)="addMode = true;" mat-raised-button cdkFocusInitial
+                color="primary">New vendor</button></div>
+        <div class="row">
+            <div class="col col6">
+                <button (click)="saveVendor()" *ngIf="addMode" [disabled]="vendorForm.pristine" mat-raised-button cdkFocusInitial
+                    color="primary">Save vendor</button>
+            </div>
+            <div class="col col6">
+                <button *ngIf="addMode" (click)="addMode = false;" mat-raised-button cdkFocusInitial
+                color="warn">Cancel</button>
+            </div>
+        </div>
+        <mat-list-item class="row" *ngFor="let vendor of vendorsList">
+            <div class="col col6">{{vendor.name}}</div>
+            <div class="col col3">
+                <button mat-raised-button (click)="save()"> Edit </button>
+            </div>
+            <div class="col col3">
+                <button mat-raised-button (click)="undo()"> Delete </button>
+            </div>
+        </mat-list-item>
+    </div>
+</div>

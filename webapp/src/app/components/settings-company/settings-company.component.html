@@ -1,0 +1,99 @@
+<div *ngIf="isDataLoaded" class="center min-w-1000">
+  <h2>COMPANY PROFILE</h2>
+  <p>This information is used for invoicing, emails, and more. Make sure it's correct!</p>
+  <form [formGroup]="companyForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row">
+      <mat-form-field class="col col6">
+        <mat-label>Company name</mat-label>
+        <input matInput formControlName="business_name" tabindex="1" placeholder="Company name">
+        <mat-error>This filed is mandatory!</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col col6">
+        <mat-label>Company type</mat-label>
+        <mat-select tabindex="2" formControlName="company_type_id">
+          <mat-option *ngFor="let type of companyTypes" [value]="type.id">{{type.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col col6">
+        <mat-label>Industry</mat-label>
+        <mat-select tabindex="3" formControlName="industry_id">
+          <mat-option *ngFor="let industry of industries" [value]="industry.id">{{industry.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="col col6">
+        <mat-label>Base Currency</mat-label>
+        <mat-select tabindex="4" formControlName="currency_id">
+          <mat-option *ngFor="let currency of currencies" [value]="currency.id">{{currency.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col col4">
+        <mat-label>Country</mat-label>
+        <mat-select tabindex="5" formControlName="country_id">
+          <mat-option *ngFor="let country of countries" [value]="country.id">{{country.name}}</mat-option>
+        </mat-select>
+        <mat-error>This filed is mandatory!</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col col4">
+        <mat-label>Address</mat-label>
+        <input matInput tabindex="6" placeholder="Address Line 1" formControlName="address1">
+      </mat-form-field>
+      <mat-form-field class="col col4">
+        <mat-label>Address2</mat-label>
+        <input matInput tabindex="7" type="text" placeholder="Address Line 2" formControlName="address2">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col col4">
+        <mat-label>City</mat-label>
+        <input matInput tabindex="8" placeholder="City" formControlName="city">
+      </mat-form-field>
+      <mat-form-field class="col col4">
+        <mat-label>Province</mat-label>
+        <input matInput tabindex="9" placeholder="Province" formControlName="province">
+      </mat-form-field>
+      <mat-form-field class="col col4">
+        <mat-label>Postal Code</mat-label>
+        <input matInput formControlName="postal_code" tabindex="10" placeholder="Postal Code">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col col6">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" tabindex="11">
+      </mat-form-field>
+      <mat-form-field class="col col6">
+        <mat-label>Company URL</mat-label>
+        <input matInput formControlName="url" tabindex="12" placeholder="http://">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col col6">
+        <mat-label>Business Phone</mat-label>
+        <input matInput formControlName="phone" tabindex="12">
+      </mat-form-field>
+      <mat-form-field class="col col6">
+        <mat-label>Mobile Phone</mat-label>
+        <input matInput formControlName="mobile_phone" tabindex="12">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col col6">
+        <mat-label>Fax</mat-label>
+        <input matInput formControlName="fax" tabindex="12">
+      </mat-form-field>
+      <mat-form-field class="col col6">
+        <mat-label>Time Zone</mat-label>
+        <mat-select formControlName="time_zone_id" tabindex="12">
+          <mat-option *ngFor="let timezone of timezones" [value]="timezone.id">{{timezone.region}} {{timezone.gmt}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button class="col col1" mat-raised-button color="primary" type="submit"
+      [disabled]="!companyForm.valid || !companyForm.dirty">Save</button>
+  </form>
+</div>

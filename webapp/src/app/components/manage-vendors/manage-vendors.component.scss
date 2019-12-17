@@ -1,0 +1,23 @@
+:host {
+    min-width: 400px;
+    display  : block;
+
+    & /deep/ {
+        mat-list-item.row {
+            &>div {
+                display: flex;
+                width  : 100%;
+
+                button {
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    button {
+                        visibility: normal;
+                    }
+                }
+            }
+        }
+    }
+}

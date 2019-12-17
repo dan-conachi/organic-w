@@ -1,0 +1,13 @@
+<div class="center min-w-1000">
+  <h2>MISCELLANEOUS</h2>
+  <p>Random tweaks</p>
+  <form [formGroup]="miscForm" novalidate>
+    <label class="heading-h3">Date format</label>
+    <mat-form-field class="col col4">
+      <mat-select tabindex="1" formControlName="date_format_type">
+        <mat-option *ngFor="let format of dateFormats" [value]="format.key">{{format.value}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <button class="col col1" mat-raised-button color="primary" type="submit" (click)="save()" [disabled]="!miscForm.dirty">Save</button>
+</div>

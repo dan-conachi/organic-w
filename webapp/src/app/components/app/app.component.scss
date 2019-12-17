@@ -1,0 +1,17 @@
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    background-color: #c1d5ea;
+    a {
+        flex: 0 0 50px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        mat-icon {
+            font-size: 32px;
+            height: 32px;
+            width: 32px;
+        }
+    }
+  }

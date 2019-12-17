@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-container">
+  <left-nav-bar></left-nav-bar>
+  <div>
+      <div class="top-nav">
+        <a routerLink="/people"><mat-icon [ngStyle]="{'color':'#2d323e'}">notifications</mat-icon></a>
+        <a ><mat-icon [ngStyle]="{'color':'#2d323e'}">account_box</mat-icon></a>
+        <a href=""><mat-icon [ngStyle]="{'color':'#2d323e'}">live_help</mat-icon></a>
+        <a routerLink="/settings"><mat-icon [ngStyle]="{'color':'#2d323e'}">settings_applications</mat-icon></a>
+        <a href=""><mat-icon [ngStyle]="{'color':'#2d323e'}">power_settings_new</mat-icon></a>
+      </div>
+      <div class="router-main">
+        <router-outlet ></router-outlet>
+      </div>
+  </div>
+</div>

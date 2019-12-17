@@ -1,0 +1,43 @@
+$nav-width: 60px;
+
+menu {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 60px;
+    transition: width 500ms ease-in-out;
+    z-index: 2;
+    -webkit-transition: width 500ms ease-in-out;
+    -moz-transition: width 500ms ease-in-out;
+    -o-transition: width 500ms ease-in-out;
+    &:hover {
+        width: 200px;
+    }
+    div.logo {  
+        height: $nav-width;
+        background: rgba(0,0,0,.87) url('http://angular-material.fusetheme.com/assets/images/logos/fuse.svg') center / contain no-repeat;
+    }
+    > ul {
+        background-color: #2d323e;
+        margin: 0;
+        padding: 0;
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        a {
+            display: flex;
+            width: 200px;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 0;
+            line-height: 26px;
+            mat-icon {
+                font-size: 36px;
+                margin: 0 12px;
+                height: 36px;
+                width: 36px;
+            }
+        } span {
+            line-height: 40px;
+        }
+    }
+}

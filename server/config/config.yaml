@@ -1,0 +1,7 @@
+devmode: true
+db:
+  host: localhost
+  port: 5432
+  user: gux
+  password: 'gux'
+  database: organic_world

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0d83dd;
+    display: flex;
+    flex-direction: column;
+    > div {
+        flex: 1 1 auto;
+    }
+    .ui-view {
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 12px;
+        margin: 0;      
+        padding: 0;
+        display: block;
+        clear: both;
+        .sa-login {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 300px;
+            max-width: 678px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: auto;
+            background-color: #e0dcdd;
+            .bg-arrow {
+                float: left;
+                position: relative;
+                width: 200px;
+                height: 300px;
+                background-color: #ffffff;
+                &::after {
+                    content: '';
+                    height: 0;
+                    width: 0;
+                    border-left: 30px solid #ffffff;
+                    border-bottom: 150px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-top: 150px solid transparent;
+                    position: absolute;
+                    right: -45px;
+                }   
+            }
+            form {
+                padding: 65px 0 5px 50px;
+                overflow: hidden;
+                label {
+                    color: #403a3a;
+                    font-size: 16px;
+                }
+                input {
+                    display: block;
+                    margin: 10px 0 20px;
+                    width: 400px;
+                    padding: 10px 0;
+                    border-style: none;
+                    text-indent: 10px;
+                    color: #403a3a;
+                    border-radius: 3px;
+                }
+            }
+            input.btn {
+                display: inline-block;
+                color: #ffffff;
+                padding: 8px 25px;
+                font: 18px Arial, Helvetica, sans-serif;
+                text-align: center;
+                border: none;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                box-shadow: 1px 1px 4px #DADADA;
+                --box-shadow: 1px 1px 4px #DADADA;
+                -moz-box-shadow: 1px 1px 4px #DADADA;
+                -webkit-box-shadow: 1px 1px 4px #DADADA;
+                cursor: pointer;
+                transition: background-color .3s;
+                text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+                &.green {
+                    background: #85c51f;
+                    border: 1px solid #659c17;
+                    box-shadow: 0 1px 0 #9dd04b inset;
+                }
+            }
+        }
+    }
+}
