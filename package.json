@@ -18,7 +18,7 @@
     "@angular/cdk": "^8.2.3",
     "@angular/core": "^8.2.14",
     "@angular/material": "^8.2.3",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "class-transformer": "^0.2.3",
     "cookie-parser": "^1.4.4",
